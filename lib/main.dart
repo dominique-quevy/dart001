@@ -1,3 +1,12 @@
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// ----------------------------------------------
+
+void main() {
+
 /*
   Introduction to Dart
   This page provides a brief introduction to the Dart language through samples of its main features.
@@ -9,9 +18,9 @@
   Hello World
   Every app requires the top-level main() function, where execution starts. Functions that don’t explicitly return a value have the void return type. To display text on the console, you can use the top-level print() function:
 */
-void main() {
+
   print('Hello, World!');
-//}
+
 /*
   Read more about the main() function in Dart, including optional parameters for command-line arguments.
 */
@@ -64,12 +73,15 @@ Functions
 We recommend specifying the types of each function’s arguments and return value:
 */
 
+/*
 int fibonacci(int n) {
   if (n == 0 || n == 1) return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
+*/
 
-var result = fibonacci(20);
+var result = fibonacci(6);
+print('fibonacci(20) = $result');
 /*
 A shorthand => (arrow) syntax is handy for functions that contain a single statement. This syntax is especially useful when passing anonymous functions as arguments:
 */
